@@ -198,6 +198,309 @@
         maintenance, invoices, and key events — cars, trucks, and motorcycles — all in one place.
       </p>
 
+<!-- =========================
+     Screenshots (mobile-first carousel + desktop grid)
+     Drop this section inside <main> where you want it.
+     Assumes your page already has a dark background.
+========================= -->
+<section class="shots" id="screenshots" aria-label="CareMyRide screenshots">
+  <div class="shots__head">
+    <h2>See it in action</h2>
+    <p>A clean, living history for cars, trucks, and motorcycles — built for owners who care.</p>
+  </div>
+
+  <!-- Desktop grid -->
+  <div class="shots__grid" aria-hidden="false">
+    <!-- 1 -->
+    <figure class="shot">
+      <div class="shot__frame">
+        <img
+          src="assets/shots/01-rides.png"
+          alt="Rides overview showing Oldie, Trustie and a pickup"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>
+        <strong>All your rides.</strong>
+        One place.
+      </figcaption>
+    </figure>
+
+    <!-- 2 -->
+    <figure class="shot">
+      <div class="shot__frame">
+        <img
+          src="assets/shots/02-events.png"
+          alt="Events list showing upcoming and completed maintenance items"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>
+        <strong>Never lose track.</strong>
+        Maintenance stays visible.
+      </figcaption>
+    </figure>
+
+    <!-- 3 -->
+    <figure class="shot">
+      <div class="shot__frame">
+        <img
+          src="assets/shots/03-service-events.png"
+          alt="Service events timeline for a vehicle with done dates"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>
+        <strong>Verifiable history.</strong>
+        Ready for resale, anytime.
+      </figcaption>
+    </figure>
+
+    <!-- 4 -->
+    <figure class="shot">
+      <div class="shot__frame">
+        <img
+          src="assets/shots/04-expenses.png"
+          alt="Expenses list with amounts per invoice and ride"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>
+        <strong>Know what you spent.</strong>
+        And why.
+      </figcaption>
+    </figure>
+
+    <!-- 5 -->
+    <figure class="shot">
+      <div class="shot__frame">
+        <img
+          src="assets/shots/05-invoice-detail.png"
+          alt="Invoice detail view with vendor, date, ride and line items"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>
+        <strong>Invoices linked.</strong>
+        To the right ride.
+      </figcaption>
+    </figure>
+
+    <!-- 6 -->
+    <figure class="shot">
+      <div class="shot__frame">
+        <img
+          src="assets/shots/06-create-expense.png"
+          alt="Create new expense modal showing invoice upload and fields"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>
+        <strong>Scan. Save. Done.</strong>
+        Upload or enter manually.
+      </figcaption>
+    </figure>
+
+    <!-- 7 -->
+    <figure class="shot">
+      <div class="shot__frame">
+        <img
+          src="assets/shots/07-mileage.png"
+          alt="Mileage database screen with entries per ride and date"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption>
+        <strong>Mileage that makes sense.</strong>
+        Per ride, over time.
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- Mobile carousel (horizontal scroll, snap) -->
+  <div class="shots__carousel" aria-label="Screenshot carousel">
+    <div class="shots__track">
+      <a class="shotCard" href="assets/shots/01-rides.png" target="_blank" rel="noopener">
+        <img src="assets/shots/01-rides.png" alt="Rides overview" loading="lazy" decoding="async" />
+        <span><strong>All your rides.</strong> One place.</span>
+      </a>
+      <a class="shotCard" href="assets/shots/02-events.png" target="_blank" rel="noopener">
+        <img src="assets/shots/02-events.png" alt="Events list" loading="lazy" decoding="async" />
+        <span><strong>Never lose track.</strong> Maintenance stays visible.</span>
+      </a>
+      <a class="shotCard" href="assets/shots/03-service-events.png" target="_blank" rel="noopener">
+        <img src="assets/shots/03-service-events.png" alt="Service events timeline" loading="lazy" decoding="async" />
+        <span><strong>Verifiable history.</strong> Ready for resale.</span>
+      </a>
+      <a class="shotCard" href="assets/shots/04-expenses.png" target="_blank" rel="noopener">
+        <img src="assets/shots/04-expenses.png" alt="Expenses list" loading="lazy" decoding="async" />
+        <span><strong>Know what you spent.</strong> And why.</span>
+      </a>
+      <a class="shotCard" href="assets/shots/05-invoice-detail.png" target="_blank" rel="noopener">
+        <img src="assets/shots/05-invoice-detail.png" alt="Invoice detail" loading="lazy" decoding="async" />
+        <span><strong>Invoices linked.</strong> To the right ride.</span>
+      </a>
+      <a class="shotCard" href="assets/shots/06-create-expense.png" target="_blank" rel="noopener">
+        <img src="assets/shots/06-create-expense.png" alt="Create expense" loading="lazy" decoding="async" />
+        <span><strong>Scan. Save. Done.</strong> Fast input.</span>
+      </a>
+      <a class="shotCard" href="assets/shots/07-mileage.png" target="_blank" rel="noopener">
+        <img src="assets/shots/07-mileage.png" alt="Mileage database" loading="lazy" decoding="async" />
+        <span><strong>Mileage that makes sense.</strong> Per ride.</span>
+      </a>
+    </div>
+    <p class="shots__hint">Swipe to browse screenshots →</p>
+  </div>
+</section>
+
+<style>
+  /* ===== Screenshots section ===== */
+  .shots {
+    margin-top: 64px;
+    padding-top: 8px;
+  }
+
+  .shots__head {
+    max-width: 920px;
+    margin: 0 auto 22px auto;
+    padding: 0 24px;
+  }
+  .shots__head h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+  }
+  .shots__head p {
+    margin: 0;
+    color: var(--muted, #a0a0a0);
+    max-width: 62ch;
+  }
+
+  /* Desktop grid */
+  .shots__grid {
+    max-width: 1100px;
+    margin: 18px auto 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .shot {
+    margin: 0;
+  }
+
+  .shot__frame {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px;
+    overflow: hidden;
+    transition: transform 160ms ease, border-color 160ms ease;
+  }
+
+  .shot__frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+  }
+
+  .shot figcaption {
+    margin-top: 10px;
+    color: var(--muted, #a0a0a0);
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+  .shot figcaption strong {
+    color: var(--fg, #fff);
+    font-weight: 700;
+  }
+
+  .shot:hover .shot__frame {
+    transform: translateY(-2px);
+    border-color: rgba(255, 122, 24, 0.35);
+  }
+
+  /* Mobile carousel */
+  .shots__carousel {
+    display: none;
+    margin-top: 14px;
+    padding: 0 16px;
+  }
+
+  .shots__track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 78%;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 6px 4px 10px 4px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .shotCard {
+    scroll-snap-align: start;
+    border-radius: 18px;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px;
+  }
+
+  .shotCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    display: block;
+  }
+
+  .shotCard span {
+    display: block;
+    margin-top: 10px;
+    color: var(--muted, #a0a0a0);
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+  .shotCard strong {
+    color: var(--fg, #fff);
+  }
+
+  .shots__hint {
+    margin: 8px 4px 0 4px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.9rem;
+  }
+
+  /* Responsive: switch to carousel on small screens */
+  @media (max-width: 900px) {
+    .shots__grid {
+      display: none;
+    }
+    .shots__carousel {
+      display: block;
+    }
+  }
+
+  /* Slightly nicer on very wide screens */
+  @media (min-width: 1200px) {
+    .shots__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+</style>
+
+
+      
       <div class="cta">
         <!-- TODO: replace with your real demo URL -->
         <a href="https://demo.caremyride.com" class="primary">View the demo</a>
