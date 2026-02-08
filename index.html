@@ -15,171 +15,327 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
 
-  <style>
-    :root {
-      --bg: #0b0c0e;
-      --fg: #ffffff;
-      --muted: #a7a7a7;
-      --accent: #ff7a18;
-      --border: #202225;
-    }
+<style>
+  :root {
+    --bg: #0b0c0e;
+    --fg: #ffffff;
+    --muted: #a7a7a7;
+    --accent: #ff7a18;
+    --border: #202225;
+  }
 
-    * { box-sizing: border-box; }
+  * { box-sizing: border-box; }
 
-    html, body { height: 100%; }
+  html, body { height: 100%; }
 
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-    .container {
-      max-width: 980px;
-      padding: 28px 18px;
-      margin: 0 auto;
-    }
+  .container {
+    max-width: 980px;
+    padding: 28px 18px;
+    margin: 0 auto;
+  }
 
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 22px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    header img {
-      width: 320px;
-      max-width: 60vw;
-      height: auto;
-      display: block;
-    }
+  header img {
+    width: 320px;
+    max-width: 60vw;
+    height: auto;
+    display: block;
+  }
 
-    .hero {
-      text-align: center;
-      max-width: 660px;
-      margin: 0 auto;
-    }
+  .hero {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto;
+  }
 
-    h1 {
-      font-size: 2.8rem;
-      line-height: 1.04;
-      letter-spacing: -0.02em;
-      margin: 0 0 14px 0;
-      font-weight: 800;
-    }
+  h1 {
+    font-size: 2.8rem;
+    line-height: 1.04;
+    letter-spacing: -0.03em; /* un peu plus "premium" */
+    margin: 0 0 14px 0;
+    font-weight: 850; /* punch (si Inter variable dispo), sinon fallback 800 */
+  }
 
-    .lead {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 680px;
-      margin: 0;
-    }
+  .lead {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 680px;
+    margin: 0 auto;
+  }
 
-    .cta {
-      margin-top: 26px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
+  .cta {
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
 
-    .cta a {
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 10px;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid transparent;
-      user-select: none;
-    }
+  .cta a {
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 750;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid transparent;
+    user-select: none;
+    transition: transform 140ms ease, filter 140ms ease, border-color 140ms ease;
+  }
 
-    .cta .primary {
-      background: var(--accent);
-      color: #000;
-    }
+  .cta .primary {
+    background: var(--accent);
+    color: #000;
+  }
 
-    .cta .primary:hover { filter: brightness(1.03); }
+  .cta .primary:hover { filter: brightness(1.04); transform: translateY(-1px); }
 
-    .cta .secondary {
-      border-color: var(--border);
-      color: var(--fg);
-      background: rgba(255,255,255,0.02);
-    }
+  .cta .secondary {
+    border-color: var(--border);
+    color: var(--fg);
+    background: rgba(255,255,255,0.02);
+  }
 
-    .cta .secondary:hover { border-color: #2a2c31; }
+  .cta .secondary:hover { border-color: #2a2c31; transform: translateY(-1px); }
 
-    section {
-      margin-top: 56px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
-      text-align: left;
-    }
+  section {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    text-align: left;
+  }
 
-    h2 {
-      font-size: 1.55rem;
-      margin: 0 0 14px 0;
-      letter-spacing: -0.01em;
-      font-weight: 800;
-    }
+  /* si tu veux un bloc centré (texte centré) sur une section */
+  .section-center { text-align: center; }
+  .section-center .section-lead { margin-left: auto; margin-right: auto; }
 
-    ul {
-      margin: 0;
-      padding-left: 18px;
-    }
+  h2 {
+    font-size: 1.55rem;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.02em;
+    font-weight: 850;
+  }
 
-    li {
-      margin: 10px 0;
-      color: var(--muted);
-    }
+  ul {
+    margin: 0;
+    padding-left: 18px;
+  }
 
-    .pill {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 0.95rem;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 8px 12px;
-      background: rgba(255,255,255,0.02);
-    }
+  li {
+    margin: 10px 0;
+    color: var(--muted);
+  }
 
-    footer {
-      margin-top: 72px;
-      padding: 22px 0 10px;
-      border-top: 1px solid var(--border);
-      font-size: 0.92rem;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-between;
-    }
+  .pill {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.95rem;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.02);
+  }
 
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-    }
+  footer {
+    margin-top: 72px;
+    padding: 22px 0 10px;
+    border-top: 1px solid var(--border);
+    font-size: 0.92rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    footer a:hover { text-decoration: underline; }
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+  }
 
-    @media (max-width: 600px) {
-      header img { width: 260px; max-width: 72vw; }
-      h1 { font-size: 2.25rem; }
-      .container { padding: 22px 16px; }
-      footer { gap: 16px; }
-    }
-  </style>
+  footer a:hover { text-decoration: underline; }
+
+  /* ============================================================
+     SCREENSHOTS ("See it in action") — grid desktop + carousel mobile
+     Attendus dans ton HTML :
+     <section class="shots section-center"> (ou sans section-center)
+       <div class="shots__head">
+         <h2>See it in action</h2>
+         <p class="section-lead">...</p>
+       </div>
+
+       <div class="shots__grid">
+         <figure class="shot">
+           <div class="shot__frame"><img src="Screenshot_1.png" ...></div>
+           <figcaption><strong>...</strong> ...</figcaption>
+         </figure>
+         ...
+       </div>
+
+       <div class="shots__carousel">
+         <div class="shots__track">
+           <a class="shotCard" href="..."><img ...><span><strong>...</strong> ...</span></a>
+           ...
+         </div>
+         <div class="shots__hint">Swipe →</div>
+       </div>
+     </section>
+     ============================================================ */
+
+  .shots { border-top: 1px solid var(--border); }
+
+  .shots__head{
+    max-width: 980px;
+    margin: 0 auto 18px auto;
+    padding: 0;
+  }
+
+  .shots__head h2{
+    margin: 0 0 8px 0;
+    font-size: 1.7rem;
+  }
+
+  .shots__head p{
+    margin: 0;
+    color: var(--muted);
+    max-width: 72ch;
+  }
+
+  .shots__grid{
+    max-width: 1100px;
+    margin: 18px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .shot{ margin: 0; }
+
+  .shot__frame{
+    border-radius: 18px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 10px;              /* <- moins de marge, image plus grande */
+    overflow: hidden;
+    transition: transform 160ms ease, border-color 160ms ease;
+  }
+
+  .shot__frame img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+  }
+
+  /* captions en 2 lignes max-ish (visuellement) : benefit bold + preuve muted */
+  .shot figcaption{
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.35;
+    max-width: 26ch;
+  }
+  .shot figcaption strong{
+    color: var(--fg);
+    font-weight: 850;
+  }
+
+  .shot:hover .shot__frame{
+    transform: translateY(-2px);
+    border-color: rgba(255,122,24,0.35);
+  }
+
+  /* responsive grid */
+  @media (max-width: 1100px){
+    .shots__grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (max-width: 900px){
+    .shots__grid{ display:none; }
+    .shots__carousel{ display:block; }
+  }
+
+  /* mobile carousel */
+  .shots__carousel{
+    display:none;
+    margin-top: 14px;
+  }
+
+  .shots__track{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 78%;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 6px 4px 10px 4px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .shotCard{
+    scroll-snap-align: start;
+    border-radius: 18px;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 12px;
+  }
+
+  .shotCard img{
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    display: block;
+  }
+
+  .shotCard span{
+    display:block;
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.35;
+    max-width: 34ch;
+  }
+  .shotCard strong{ color: var(--fg); font-weight: 850; }
+
+  .shots__hint{
+    margin: 8px 4px 0 4px;
+    color: rgba(255,255,255,0.35);
+    font-size: 0.9rem;
+  }
+
+  /* petit polish global mobile */
+  @media (max-width: 600px) {
+    header img { width: 260px; max-width: 72vw; }
+    h1 { font-size: 2.25rem; }
+    .container { padding: 22px 16px; }
+    footer { gap: 16px; }
+  }
+</style>
+
 </head>
 
 <body>
